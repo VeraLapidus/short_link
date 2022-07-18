@@ -11,10 +11,11 @@
 <body>
 <main>
     <div style="display: flex; justify-content: center; background-color: teal">
-        <a href="{% url 'accounts:register' %}" style="padding:35px; text-decoration: none; color:white">Регистрация</a>
+
         {% if user.is_authenticated %}
         <a href="{% url 'accounts:profile' %}" style="padding:35px; text-decoration: none; color:white">Мой профиль</a>
         {% else %}
+        <a href="{% url 'accounts:register' %}" style="padding:35px; text-decoration: none; color:white">Регистрация</a>
         <a href="{% url 'accounts:login' %}" style="padding:35px; text-decoration: none; color:white">Авторизация</a>
         {% endif %}
     </div>
