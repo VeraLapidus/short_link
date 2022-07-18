@@ -1,0 +1,20 @@
+{% extends "profile.html" %}
+
+{% block link %}
+<h3> Cписок сокращенных ссылок пользователя  {{ user }}</h3>
+
+<table width="100%" border="5" >
+    <tr>
+        <th width="30%">Сокращенная ссылка</th>
+        <th width="70%">Полная ссылка</th>
+    </tr>
+    {% for link in links %}
+    <tr>
+        <td width="30%"> {{ link.slug }}</td>
+        <td width="70%"> {{ link.full_link }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock %}

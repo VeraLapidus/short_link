@@ -1,0 +1,13 @@
+{% extends "profile.html" %}
+
+
+{% block link %}
+<h2> Введите полную ссылку: </h2>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button> Сократить</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "profile.html" %}
+
+{% block link %}
+<h2> Сокращение ссылки </h2>
+
+
+<table width="100%" border="5">
+    <tr >
+        <th width="200">Сокращенная ссылка</th>
+        <th width="500">Полная ссылка</th>
+    </tr>
+    <tr>
+        <td> {{ link.slug }}</td>
+        <td> {{ link.full_link }}</td>
+    </tr>
+</table>
+
+
+{% endblock %}>

@@ -1,0 +1,10 @@
+{% extends 'start_page.html' %}
+
+{% block content %}
+<h2> Для регистрации заполните форму: </h2>
+    <form actoin="" method ="post">
+        {% csrf_token %}
+    <table> {{ form.as_table }} </table>
+    <button> Зарегистрироваться </button>
+    </form>
+{% endblock %}

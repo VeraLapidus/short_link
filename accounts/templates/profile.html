@@ -1,0 +1,12 @@
+{% extends "start_page.html" %}
+{% load static %}
+
+{% block content %}
+<div style="display: flex; justify-content: center; background-color: darkolivegreen">
+<a href="{% url 'main:short_link' %}" style="padding:25px; text-decoration: none; color:white"> <h3>Сократить ссылку</h3> </a>
+<a href="{% url 'main:list_links' %}" style="padding:25px; text-decoration: none; color:white"> <h3>Список моих ссылок </h3> </a>
+<a href="{% url 'accounts:logout' %}" style="padding:25px; text-decoration: none; color:white"> <h3>Выйти </h3> </a>
+
+</div>
+{% endblock %}
+
